@@ -6,6 +6,10 @@
   "engines": {
     "vscode": "^1.103.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justinknight93/digi.git"
+  },
   "categories": [
     "Other"
   ],
@@ -26,6 +30,31 @@
           "name": "Digi"
         }
       ]
+    },
+    "configuration": {
+      "title": "Digi Pet",
+      "properties": {
+        "digi.joyColor": {
+          "type": "string",
+          "default": "#308530",
+          "description": "Color of the joy bar when joy is high."
+        },
+        "digi.lowJoyColor": {
+          "type": "string",
+          "default": "#baba41",
+          "description": "Color of the joy bar when joy is medium."
+        },
+        "digi.criticalJoyColor": {
+          "type": "string",
+          "default": "#c73e3e",
+          "description": "Color of the joy bar when joy is low."
+        },
+        "digi.backgroundColor": {
+          "type": "string",
+          "default": "#a7bbe1",
+          "description": "Background color of the canvas."
+        }
+      }
     }
   },
   "scripts": {

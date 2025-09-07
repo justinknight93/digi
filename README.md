@@ -1,65 +1,37 @@
-# digi README
+# Digi
 
-This is the README for your extension "digi". After writing up a brief description, we recommend including the following sections.
+Digi is your little coding companion that lives inside a VS Code view.  
+Keep Digi happy by writing code or giving it attention, and watch it grow over time!
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+- A virtual pet that hops around while you code.
+- Digi has a **joy stat** that decreases slowly when the view is visible.
+- Digi only loses joy when you can actually see them.
+- Clicking on Digi shows a little heart and restores joy.
+- While Digi is visible you gain **experience** and levels over time.
+- Experience is gained faster when Digi is happy.
+- As Digi levels up, each new level takes progressively longer to reach.
+- When joy runs out, Digi may run away — so take good care of them!
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+No additional requirements — just install and enjoy your coding buddy.
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+This extension contributes the following settings to customize Digi’s appearance:
 
-For example:
+- `digi.joyColor`: Color of the joy bar when joy is high. (default: `#308530`)
+- `digi.lowJoyColor`: Color of the joy bar when joy is medium. (default: `#baba41`)
+- `digi.criticalJoyColor`: Color of the joy bar when joy is low. (default: `#c73e3e`)
+- `digi.backgroundColor`: Background color of the canvas. (default: `#a7bbe1`)
 
-This extension contributes the following settings:
+Example in `settings.json`:
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+```json
+"digi.joyColor": "#00ff00",
+"digi.lowJoyColor": "#ffff00",
+"digi.criticalJoyColor": "#ff0000",
+"digi.backgroundColor": "#222222"
+```
