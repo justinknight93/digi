@@ -2,7 +2,9 @@
   "name": "digi",
   "displayName": "Digi",
   "description": "Your very own virtual pet Digi!",
+  "icon": "media/digi.png",
   "version": "0.0.1",
+  "publisher": "JustinKnight",
   "engines": {
     "vscode": "^1.103.0"
   },
