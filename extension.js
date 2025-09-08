@@ -67,6 +67,9 @@ class MyWebviewViewProvider {
       if (message.command === "showMessage") {
         vscode.window.showInformationMessage(message.text);
       }
+      if (message.command === "requestConfig") {
+        this.updateConfig();
+      }
     });
   }
 
@@ -76,6 +79,7 @@ class MyWebviewViewProvider {
       this._view.webview.postMessage({
         type: "config",
         settings: {
+          textColor: config.get("textColor"),
           joyColor: config.get("joyColor"),
           lowJoyColor: config.get("lowJoyColor"),
           criticalJoyColor: config.get("criticalJoyColor"),

@@ -1,3 +1,4 @@
+let TEXT_COLOR = "#000000";
 let JOY_COLOR = "#308530";
 let LOW_JOY_COLOR = "#baba41";
 let CRITICAL_JOY_COLOR = "#c73e3e";
@@ -15,11 +16,18 @@ function sendMessage(text) {
     text,
   });
 }
+function requestConfig() {
+  vscode.postMessage({
+    command: "requestConfig",
+    text: "",
+  });
+}
 window.addEventListener("message", (event) => {
   const message = event.data;
 
   if (message.type === "config") {
     const s = message.settings;
+    TEXT_COLOR = s.textColor;
     JOY_COLOR = s.joyColor;
     LOW_JOY_COLOR = s.lowJoyColor;
     CRITICAL_JOY_COLOR = s.criticalJoyColor;
@@ -111,7 +119,7 @@ const fps = new FpsCtrl(30, function (e) {
   drawHearts(ctx);
   // vpet name and level
   ctx.font = "12px sans-serif";
-  ctx.fillStyle = "#000000"; // Or any color you want
+  ctx.fillStyle = TEXT_COLOR;
   ctx.fillText(`${digi.name} (Lv. ${getLevel()})`, 10, 14);
 
   // vpet stats
@@ -337,6 +345,7 @@ setInterval(save, 1000);
 resize();
 load();
 name();
+requestConfig();
 if (digi.joy <= 0) {
   gameOver();
 }

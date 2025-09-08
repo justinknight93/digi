@@ -3,7 +3,7 @@
   "displayName": "Digi",
   "description": "Your very own virtual pet Digi!",
   "icon": "media/digi.png",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "JustinKnight",
   "engines": {
     "vscode": "^1.103.0"
@@ -36,6 +36,11 @@
     "configuration": {
       "title": "Digi Pet",
       "properties": {
+        "digi.textColor": {
+          "type": "string",
+          "default": "#000000",
+          "description": "Color of the name and level text."
+        },
         "digi.joyColor": {
           "type": "string",
           "default": "#308530",
